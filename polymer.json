@@ -1,0 +1,30 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/main-app/main-app.js",
+  "sources": [
+    "images/**/*"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "node_modules/@webcomponents/webcomponentsjs/**",
+    "node_modules/web-animations-js/web-animations-next-lite.min.js",
+    "config.js"
+  ],
+  "builds": [
+    {
+      "name": "es6-unbundled",
+      "preset":"es6-unbundled"
+    },
+    {
+      "name": "es5-bundled",
+      "preset": "es5-bundled"
+    }
+  ],
+  "moduleResolution": "node",
+  "npm": true,
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  }
+}
